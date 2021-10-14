@@ -1,0 +1,281 @@
+:root{
+  /* (sub-heading at the top of the app UI) */
+  --pale-violet: hsl(276, 100%, 81%);
+  /* (chat on the left) */
+  --moderate-violet: hsl(276, 55%, 52%);
+  /* (chat on the right) */
+  --dark-violet: hsl(271, 15%, 43%);
+  /* (placeholder text) */
+  --grayish-blue: hsl(206, 6%, 79%);
+  /* (main heading) */
+  --very-dark-violet: hsl(271, 36%, 24%);
+  /* (paragraph) */
+  --grayish-violet: hsl(270, 7%, 64%);
+/* These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient: */
+  --light-magenta: hsl(293, 100%, 63%);
+  --light-violet: hsl(264, 100%, 61%);
+/*  (app background) */
+  --light-grayish-violet: hsl(270, 20%, 96%);
+  /* (submit button background) */
+  --button-violet : hsl(271, 36%, 24%);
+  /* (radio button outline) */
+  --very-light-magenta : hsl(289, 100%, 72%);
+}
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body{
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-grayish-violet);
+}
+/* background styles */
+.bg-left{
+  width: 25%;
+  height: 800px;
+  background-image: linear-gradient(to top right, var(--light-violet), var(--light-magenta));
+  align-self: flex-start;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-clip-path: circle(69.3% at 50% 20%);
+  clip-path: circle(69.3% at 50% 20%);
+  z-index: -1;
+}
+.bg-right{
+  width: 25%;
+  height: 600px;
+  background-color: pink;
+  opacity: .1;
+  align-self: flex-end;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border-top-left-radius: 500px;
+  z-index: -1;
+}
+/* container and content styles */
+.main-container{
+  width: 60%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* responsive */
+@media (max-width:1024px) {
+  .bg-left{
+    height: 400px;
+  }
+  .bg-right{
+    width: 50%;
+  }
+  body{
+    height: auto;
+  }
+  .main-container{
+    flex-direction: column;
+  }
+  .phone{
+    margin-top: 50px;
+  }
+  aside{
+    margin-top: 50px;
+  }
+}
+.phone{
+  width: 300px;
+  height: 550px;
+  border: solid 8px white;
+  border-radius: 25px;
+  background-color: var(--light-grayish-violet);
+}
+.phone-header{
+  width: 100%;
+  height: 85px;
+  background-image: linear-gradient(to right, var(--light-violet), var(--light-magenta));
+  border-radius: 25px 25px 0 0;
+  position: relative;
+}
+.speaker{
+  width: 50%;
+  height: 20px;
+  background-color: white;
+  border-radius: 0 0 60px 60px;
+  position: absolute;
+  top: -8px;
+  left: 25%;
+}
+.profile{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.profile img{
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+.back, .profile-picture{
+  margin-left: 5px;
+}
+.menu-btn{
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.profile-picture{
+  width: 50px;
+  height: 50px;
+  border: solid 2px white;
+  border-radius: 50%;
+  background-image: url('../images/avatar.jpg');
+  background-size: contain;
+}
+.profile-info{
+  margin-left: 10px;
+}
+.name{
+  font-size: 13px;
+  color: white;
+}
+.status{
+  font-size: 9px;
+  color: var(--pale-violet);
+}
+.profile-info p{
+  margin: 5px 0;
+}
+/* chat styles */
+.chat{
+  width: 100%;
+  height: 445px;
+  position: relative;
+}
+.received, .send{
+  font-size:12px;
+  color: var(--moderate-violet);
+  background-color: #E7E8E7;
+  border-radius: 8px;
+  display: inline-block;
+  max-width: 60%;
+  padding: 6px;
+  margin: 5px 5px 5px 5%;
+}
+.received{
+  border-bottom-left-radius: 0;
+}
+.send{
+  border-bottom-right-radius: 0;
+  -webkit-box-shadow: 5px 5px 15px 2px #E6E6E6;
+box-shadow: 5px 5px 15px 2px #E6E6E6;
+}
+.images-sent img{
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  margin-right: 5px;
+}
+.sent{
+  text-align: right;
+}
+.sent p{
+  background-color: white;
+  color: var(--dark-violet);
+}
+.options{
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.options p{
+  width: 80%;
+  background-image: linear-gradient(to left, var(--light-violet), var(--light-magenta));
+  color: white;
+  font-size: 10px;
+  display: inline-block;
+  border-radius: 8px;
+  padding: 6px 30px;
+  margin: 1px 5px 5px 5%;
+}
+ion-icon{
+  position: absolute;
+  left: 20px;
+  margin-top: 5px;
+  /* top: 5px; */
+  color: var(--very-light-magenta);
+  z-index: 1;
+}
+span{
+  font-size: 14px;
+  font-weight: 700;
+  position: absolute;
+  right: 60px;
+  margin-top: -1px;
+}
+.sending{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+input{
+  width: 90%;
+  border: none;
+  border-radius: 40px;
+  background-color: white;
+  outline: none;
+  margin: 5px 5%;
+  padding: 10px 15px;
+  bottom: 0;
+}
+input::placeholder{
+  color: var(--grayish-blue);
+  padding: 8px;
+}
+.sending img{
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  right: 7%;
+  top: 20%;
+}
+/* paragraph at right */
+aside{
+  width: 45%;
+}
+h1{
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--very-dark-violet);
+}
+aside p{
+  font-size: 15px;
+  color: var(--grayish-violet);
+  line-height: 1.9;
+}
+/* responsive */
+@media (max-width:1024px) {
+  aside{
+    width: 100%;
+    margin: 50px auto;
+    z-index: 1
+  }
+  h1{
+    font-size: 1.5rem;
+  }
+}

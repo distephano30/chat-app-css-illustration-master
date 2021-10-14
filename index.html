@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <!-- css -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+</head>
+<body>
+  <!-- the left background -->
+  <div class="bg-left"></div>
+  <!-- the main content -->
+  <div class="main-container">
+    <!-- the phone container -->
+    <div class="phone">
+      <!-- the header part -->
+      <div class="phone-header">
+        <!-- the profile container -->
+        <div class="speaker"></div>
+        <div class="profile">
+          <img class="back" src="images/chevron-back.svg" alt="back-button" fill="#ccc">
+          <div class="profile-picture"></div>
+          <div class="profile-info">
+            <p class="name">Samuel Green</p>
+            <p class="status">Available to Walk</p>
+          </div>
+          <img class="menu-btn" src="images/ellipsis-vertical.svg" alt="menu-button">
+        </div>
+      </div>
+
+      <!-- the messages container -->
+      <div class="chat">
+        <div class="messages">
+          <p class="received">That sounds great. I’d be happy with that.</p><br>
+          <p class="received">Could you send over some pictures of your dog, please?</p><br>
+        </div>
+        <!-- messages sent -->
+        <div class="messages sent">
+          <div class="images-sent">
+            <img src="images/dog-image-1.jpg" alt="a dog">
+            <img src="images/dog-image-2.jpg" alt="a dog">
+            <img src="images/dog-image-3.jpg" alt="a dog">
+          </div>
+          <p class="send">Here are a few pictures. She’s a happy girl!</p><br>
+          <p class="send">Can you make it?</p><br>
+        </div>
+        <!-- messages received -->
+        <div class="messages">
+          <p class="received">She looks so happy! The time we discussed works. How long shall I take her out for?</p><br>
+          <div class="options">
+            <ion-icon name="ellipse-outline"></ion-icon>
+            <p> 30 minute walk <span>$29</span> </p><br>
+            <ion-icon name="ellipse-outline"></ion-icon>
+            <p> 1 hour walk <span>$49</span></p><br>
+          </div>
+        </div>
+        <!-- writting messages -->
+        <div class="sending">
+          <input type="text" name="sending" placeholder="Type a message…">
+          <img src="images/chevron-forward-circle.svg" alt="">
+        </div>
+      </div>
+    </div>
+
+    <!-- the article -->
+    <aside class="">
+      <h1>Simple booking</h1>
+      <p>  Stay in touch with our dog walkers through the chat interface. This makes it easy to
+        discuss arrangements and make bookings. Once the walk has been completed you can rate
+        your walker and book again all through the chat.</p>
+
+      </aside>
+    </div>
+    <!-- the right background -->
+    <div class="bg-right"></div>
+
+    <!-- icon -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
+  </html>
